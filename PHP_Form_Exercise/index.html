@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP FORM EXERCISE</title>
+</head>
+
+<body>
+    <main>
+        <form action="process.php" method="get">
+            <div><input type="text" name="text" required></div>
+            <div><input type="email" name="email" placeholder="Email" required></div>
+            <div class="wrap">
+                <button type="submit" class="button">Submit</button>
+            </div>
+        </form>
+
+    </main>
+</body>
+
+</html>
+
+<style>
+    body {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    input {
+        border: 2px solid;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin: 0.25rem;
+        min-width: 125px;
+        padding: 0.5rem;
+        transition: border-color 0.5s ease-out;
+    }
+
+    input:optional {
+        border-color: gray;
+    }
+
+    input:required:valid {
+        border-color: green;
+    }
+
+    input:invalid {
+        border-color: red;
+    }
+
+    input:required:focus:valid {
+        background: url("https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg") no-repeat 95% 50% lightgreen;
+        background-size: 25px;
+    }
+
+    input:focus:invalid {
+        background: url("https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg") no-repeat 95% 50% lightsalmon;
+        background-size: 25px;
+    }
+
+    .wrap {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .button {
+        min-width: 300px;
+        min-height: 60px;
+        font-family: 'Nunito', sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 700;
+        color: #313133;
+        background: #bb0000;
+        background: linear-gradient(90deg, #bb0000 0%, #fd9300);
+        border: none;
+        border-radius: 1000px;
+        box-shadow: 12px 12px 24px rgba(79, 209, 197, .64);
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+        padding: 10px;
+    }
+
+    button::before {
+        content: '';
+        border-radius: 1000px;
+        min-width: calc(300px + 12px);
+        min-height: calc(60px + 12px);
+        border: 6px solid #00FFCB;
+        box-shadow: 0 0 60px rgba(0, 255, 203, .64);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all .3s ease-in-out 0s;
+    }
+
+    .button:hover,
+    .button:focus {
+        color: #313133;
+        transform: translateY(-6px);
+    }
+
+    button:hover::before,
+    button:focus::before {
+        opacity: 1;
+    }
+
+    button::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 6px solid #00FFCB;
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: ring 1.5s infinite;
+    }
+
+    button:hover::after,
+    button:focus::after {
+        animation: none;
+        display: none;
+    }
+
+    @keyframes ring {
+        0% {
+            width: 30px;
+            height: 30px;
+            opacity: 1;
+        }
+
+        100% {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+        }
+    }
+</style>
