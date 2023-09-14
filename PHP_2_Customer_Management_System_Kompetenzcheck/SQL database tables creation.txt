@@ -1,0 +1,18 @@
+CREATE TABLE USERS (
+    USER_ID INT PRIMARY KEY,
+    NAME VARCHAR(32),
+    EMAIL VARCHAR(32),
+    PASSWORD VARCHAR(32)
+);
+
+CREATE TABLE clients (
+    company_id INT PRIMARY KEY,
+    company_name VARCHAR(255),
+    contact_person VARCHAR(255),
+    phone INT(11),
+    address VARCHAR(255),
+    created_by INT,
+    created_at DATE,
+    edited_at DATE,
+    FOREIGN KEY (created_by) REFERENCES USERS (USER_ID)
+);
