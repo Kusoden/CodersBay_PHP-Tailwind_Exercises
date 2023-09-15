@@ -9,7 +9,7 @@
 
 <body>
     <main>
-        <form action="login.php">
+        <form action="./loginCheck_func.php" method ="post">
             <div>email: <input type="text" name="email" required></div>
             <div>Password: <input type="password" name="password" required></div>
             <div class="wrap">
