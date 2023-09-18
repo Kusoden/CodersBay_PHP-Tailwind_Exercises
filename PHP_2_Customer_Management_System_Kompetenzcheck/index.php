@@ -7,17 +7,27 @@
     <title>Document</title>
 </head>
 
+<?php
+session_start();
+?>
+
 <body>
     <main>
-        <form action="./loginCheck_func.php" method ="post">
+        <form action="./loginCheck_func.php" method="post">
             <div>email: <input type="text" name="email" required></div>
             <div>Password: <input type="password" name="password" required></div>
             <div class="wrap">
                 <button type="submit" class="button">Log in</button>
             </div>
         </form>
-            <a href="registration.php">JOIN US!</a>
+        <a href="registration.php">JOIN US!</a>
     </main>
+
+<?php 
+
+$_SESSION['user_id'] =$_Post ['user_id'];?>
 </body>
 
 </html>
+
+

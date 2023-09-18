@@ -27,9 +27,6 @@
                 <label for="address">address</label>
                 <input name="address" type="text" class="form-control" id="address">
 
-                <label for="created_by">Created by</label>
-                <input name="created_by" type="text" class="form-control" id="created_by">
-
                 <label for="created_at">Created at</label>
                 <input name="created_at" type="date" class="form-control" id="created_at">
 
@@ -39,6 +36,10 @@
                 <button type="submit">Submit</button>
             </div>
         </form>
+        <form action="dashboard_Overview.php" method="post">
+            <button type="submit" name="dashboard">dashboard</button>
+        </form>
+
         <form action="index.php" method="post">
             <button type="submit" name="logout">log out</button>
         </form>

@@ -2,6 +2,8 @@
 include_once './header.php';
 require_once './db/db_connection.php';
 
+session_start();
+
 if ($_POST['email'] != "" || $_POST['password'] != "") {
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -12,6 +14,9 @@ if ($_POST['email'] != "" || $_POST['password'] != "") {
     $row = $stmt->rowCount();
 
     if ($row > 0) {
+
+         $_SESSION['user_id'] =$_Post ['user_id'];
+
         header("location: dashboard_new_customer.php");
         exit;
     } else {

@@ -13,7 +13,7 @@ $edited_at = $_POST['edited_at'];
 $sql = "INSERT INTO clients (company_name, contact_person, phone, address, created_by, created_at, edited_at) VALUES (?, ?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
 $stmt->execute([$company_name, $contact_person, $phone, $address, $created_by, $created_at,$edited_at]);
-header("Location: dashboard_Overview.php");
+header("Location: dashboard_new_customer.php");
 ?>
 </body>
 </html>
