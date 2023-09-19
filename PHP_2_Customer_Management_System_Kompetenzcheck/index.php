@@ -7,9 +7,6 @@
     <title>Document</title>
 </head>
 
-<?php
-session_start();
-?>
 
 <body>
     <main>
@@ -23,9 +20,6 @@ session_start();
         <a href="registration.php">JOIN US!</a>
     </main>
 
-<?php 
-
-$_SESSION['user_id'] =$_Post ['user_id'];?>
 </body>
 
 </html>

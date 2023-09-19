@@ -16,22 +16,22 @@
                 <h2>Create Clients</h2>
 
                 <label for="company_name">Company Name</label>
-                <input name="company_name" type="text" class="form-control" id="company_name">
+                <input name="company_name" type="text" id="company_name">
 
                 <label for="contact_person">Contact Person</label>
-                <input name="contact_person" type="text" class="form-control" id="contact_person">
+                <input name="contact_person" type="text" id="contact_person">
 
                 <label for="phone">Phone</label>
-                <input name="phone" type="tel" class="form-control" id="phone">
+                <input name="phone" type="tel" id="phone">
 
                 <label for="address">address</label>
-                <input name="address" type="text" class="form-control" id="address">
+                <input name="address" type="text" id="address">
 
                 <label for="created_at">Created at</label>
-                <input name="created_at" type="date" class="form-control" id="created_at">
+                <input name="created_at" type="date" id="created_at">
 
                 <label for="edited_at">Edited at</label>
-                <input name="edited_at" type="date" class="form-control" id="edited_at">
+                <input name="edited_at" type="date" id="edited_at">
                 <br>
                 <button type="submit">Submit</button>
             </div>
