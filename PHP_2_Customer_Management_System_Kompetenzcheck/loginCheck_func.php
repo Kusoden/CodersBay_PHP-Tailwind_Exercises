@@ -2,8 +2,6 @@
 include_once './header.php';
 require_once './db/db_connection.php';
 
-session_start();
-
 if ($_POST['email'] != "" || $_POST['password'] != "") {
     $email = $_POST['email'];
     $password = $_POST['password'];

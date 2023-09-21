@@ -79,7 +79,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./PHP_2_Customer_Management_System_Kompetenzcheck/src/input.css -o ./PHP_2_Customer_Management_System_Kompetenzcheck/output.css --watch"
+    "dev": "tailwindcss -i ./src/input.css -o ./output.css --watch"
   },
   "author": "",
   "license": "ISC",

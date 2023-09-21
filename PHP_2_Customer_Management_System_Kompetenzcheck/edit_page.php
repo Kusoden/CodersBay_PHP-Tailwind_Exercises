@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 2 Customer Managment Kompetenzcheck</title>
-</head>
-
-<body>
 <?php
+include_once './header.php';
 require_once './db/db_connection.php';
     if (isset($_GET['comp'])) {
         $company_id = $_GET['comp'];

@@ -1,9 +1,6 @@
-
-<html>
-<head>
-    <title>User Registration</title>
-</head>
-<body>
+<?php
+include_once './header.php';
+?>
     <h2>User Registration</h2>
     <form action="registerCheck_func.php" method="post">
         <label for="name">Name:</label>

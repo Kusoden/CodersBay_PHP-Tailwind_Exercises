@@ -15,18 +15,30 @@
 </head>
 <?php
 session_start();
+
+if (isset($_SESSION['user_id']) && isset($_SESSION['name'])) {
+    $user_id = $_SESSION['user_id'];
+    $user_name = $_SESSION['name'];
+} else {
+
+    header("location: index.php");
+    exit;
+}
 ?>
 
-<body class="font-[poppins] from-blue-950 to-green-900 h-screen">
+<body class="font-[poppins] bg-gradient-to-r from-blue-950 to-green-900 h-screen">
 
     <header class="bg-white">
-        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 " aria-label="Global">
-            <div class="flex lg:flex-1">
+        <nav class="mx-auto flex items-center justify-between py-4 " aria-label="Global">
+            <h1>Logged in as:<?= $user_name?>, with id: <?= $user_id?></h1>
+            <div class="flex lg:flex-1 ">
                 <a href="#" class="">
                     <img class="h-10 w-auto" src="./images/Huma.png" alt="">
                 </a>
             </div>
-            <div class=" lg:flex lg:gap-x-12  ">
+            <div>
+            </div>
+            <div class=" lg:flex lg:gap-x-12">
                 <div dir="ltr">
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-blue-900 p-3 lg:rounded-s-lg hover:text-white">Products</a>
                 </div>
@@ -40,8 +52,11 @@ session_start();
                     <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-green-900 p-3 lg:rounded-s-lg hover:text-white">Company</a>
                 </div>
             </div>
-            <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+            
+            <div class=" lg:flex lg:flex-1 lg:justify-end">
+                <form action="dashboardLogOut_func.php" method="post">
+                    <button type="submit" name="logout" class="bg-red-600 text-white p-2">log out</button>
+                </form>
             </div>
         </nav>
 

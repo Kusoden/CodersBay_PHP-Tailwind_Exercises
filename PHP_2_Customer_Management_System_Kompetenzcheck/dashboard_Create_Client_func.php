@@ -1,7 +1,7 @@
 <?php
 include_once './header.php';
 require_once './db/db_connection.php';
-session_start();
+
 $company_name = $_POST['company_name'];
 $contact_person = $_POST['contact_person'];
 $phone = $_POST['phone'];
