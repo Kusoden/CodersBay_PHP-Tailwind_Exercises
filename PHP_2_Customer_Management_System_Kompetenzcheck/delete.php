@@ -17,7 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard_Overview.php");
         exit();
     } else {
-        echo "Permission denied.";
+        $_SESSION['delete_error'] = "You are not allowed to delete it";
+        header("Location: dashboard_Overview.php");
+        exit();
     }
 } else {
     echo "Invalid request.";

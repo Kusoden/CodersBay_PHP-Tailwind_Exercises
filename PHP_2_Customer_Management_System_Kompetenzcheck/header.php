@@ -17,7 +17,7 @@
 session_start();
 ?>
 
-<body class="font-[poppins] from-blue-950 to-green-900 h-screen">
+<body class="font-[poppins] bg-gradient-to-r from-blue-950 to-green-900 h-screen">
 
     <header class="bg-white">
         <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 " aria-label="Global">
@@ -28,23 +28,21 @@ session_start();
             </div>
             <div class=" lg:flex lg:gap-x-12  ">
                 <div dir="ltr">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-blue-900 p-3 lg:rounded-s-lg hover:text-white">Products</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-blue-900 p-3 lg:rounded-s-lg hover:text-white">other products</a>
                 </div>
                 <div>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-cyan-900 p-3 hover:text-white">Features</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-cyan-900 p-3 hover:text-white">Comments</a>
                 </div>
                 <div>
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-emerald-900 p-3 hover:text-white">Marketplace</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-emerald-900 p-3 hover:text-white">Features of our service</a>
                 </div>
                 <div dir="rtl">
-                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-green-900 p-3 lg:rounded-s-lg hover:text-white">Company</a>
+                    <a href="#" class="text-sm font-semibold leading-6 text-gray-900 hover:bg-green-900 p-3 lg:rounded-s-lg hover:text-white">About us</a>
                 </div>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+                <a href="./index.php" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
             </div>
         </nav>
 
     </header>
-
-    <body>
